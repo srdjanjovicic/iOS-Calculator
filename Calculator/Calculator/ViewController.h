@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (readonly) NSString *firstName;
 
 @end
 
