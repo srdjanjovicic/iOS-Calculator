@@ -44,6 +44,19 @@
 }
 
 - (IBAction)deleteChar:(id)sender {
+    if ( [secondEntry length] > 0 ){
+        [secondEntry deleteCharactersInRange:NSMakeRange([secondEntry length]-1, 1)];
+    }
+    else if ( operatorPressed ){
+        operatorPressed = false;
+        whichOperator = @"";
+    }
+    else if ( [firstEntry length] > 0 ){
+        [firstEntry deleteCharactersInRange:NSMakeRange([firstEntry length]-1, 1)];
+    }
+    else return;
+    
+     _labelOutput.text = [NSString stringWithFormat:@"%@ %@ %@", firstEntry, whichOperator, secondEntry];
 }
 
 -(IBAction)buttonPressed:(UIButton *)sender{
