@@ -8,9 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    bool operatorPressed, addPressed, minusPressed;
+    
+    NSString *firstEntry;
+    NSString * secondEntry;
+}
+@property (strong, nonatomic) IBOutlet UILabel *labelOutput;
 
-@property (readonly) NSString *firstName;
+
+- (IBAction)minusPressed:(id)sender;
+- (IBAction)addPressed:(id)sender;
+- (IBAction)clearOutput:(id)sender;
+- (IBAction)showResults:(id)sender;
+
+-(IBAction)buttonPressed:(UIButton *)sender;
+
+-(void) resetOperators;
 
 @end
 

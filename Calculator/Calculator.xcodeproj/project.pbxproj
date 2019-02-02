@@ -97,6 +97,10 @@
 		CDBF66502200FB2600DA3E41 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+				);
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = user151112;
 				TargetAttributes = {
