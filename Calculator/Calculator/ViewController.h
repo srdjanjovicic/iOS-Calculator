@@ -9,22 +9,20 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController{
-    bool operatorPressed, addPressed, minusPressed;
+    bool operatorPressed;
+    NSString *whichOperator;
     
-    NSString *firstEntry;
-    NSString * secondEntry;
+    NSMutableString *firstEntry;
+    NSMutableString * secondEntry;
 }
 @property (strong, nonatomic) IBOutlet UILabel *labelOutput;
 
-
-- (IBAction)minusPressed:(id)sender;
-- (IBAction)addPressed:(id)sender;
 - (IBAction)clearOutput:(id)sender;
 - (IBAction)showResults:(id)sender;
+- (IBAction)deleteChar:(id)sender;
 
 -(IBAction)buttonPressed:(UIButton *)sender;
-
--(void) resetOperators;
+-(IBAction)operatorPressed:(UIButton *)sender;
 
 @end
 
